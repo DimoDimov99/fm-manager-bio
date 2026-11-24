@@ -1,0 +1,29 @@
+/* ==========================================================
+   Season themes – the ONE file to edit for club colors & backgrounds.
+   Each season page has <body class="season-page season-N">.
+
+   To add a season: copy a block, rename it .season-3, edit values.
+   ========================================================== */
+
+.season-1 {
+  /* Club colors */
+  --club-primary: #1f4e9c;      /* top bar background */
+  --club-secondary: #f2b83b;    /* top bar underline, active link */
+  --club-on-primary: #ffffff;   /* text on the top bar (use a dark color if primary is light) */
+
+  /* Background photo */
+  --season-bg: url('../images/season-bg.svg');
+  --season-bg-opacity: 0.15;
+  /* --season-bg-size: cover; */
+  /* --season-bg-position: center; */
+  /* --season-bg-filter: none; */
+}
+
+.season-2 {
+  --club-primary: #a3202b;
+  --club-secondary: #f6d776;
+  --club-on-primary: #ffffff;
+
+  --season-bg: url('../images/season-bg.svg');
+  --season-bg-opacity: 0.15;
+}

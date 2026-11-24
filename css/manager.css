@@ -1,0 +1,36 @@
+/* ==========================================================
+   Manager photo – the ONE file to edit for the bio picture.
+   Change the values below; no HTML edits needed.
+   ========================================================== */
+
+:root {
+  --manager-img-width: 18rem;        /* photo column width on desktop; max width on mobile */
+  --manager-img-aspect: 4 / 5;       /* 4 / 5 portrait, 1 / 1 square, 3 / 2 landscape */
+  --manager-img-fit: cover;          /* cover crops to fill, contain shows the whole photo */
+  --manager-img-position: center;    /* crop focus: center, top, center 20%, 30% 40% */
+  --manager-img-radius: 8px;         /* 0 square, 8px rounded, 50% circle (use with aspect 1 / 1) */
+  --manager-img-border: 0 solid transparent;  /* e.g. 4px solid var(--club-secondary) */
+  --manager-img-shadow: none;        /* e.g. 0 8px 24px rgb(0 0 0 / 0.2) */
+  --manager-img-filter: none;        /* e.g. grayscale(1), sepia(0.3), brightness(1.05) */
+  --manager-img-opacity: 1;          /* 0 to 1 */
+  --manager-img-align: 0;            /* 0 = left, auto = centered (affects mobile layout) */
+}
+
+.manager-photo img {
+  width: 100%;
+  max-width: var(--manager-img-width);
+  margin-inline: var(--manager-img-align);
+  aspect-ratio: var(--manager-img-aspect);
+  object-fit: var(--manager-img-fit);
+  object-position: var(--manager-img-position);
+  border-radius: var(--manager-img-radius);
+  border: var(--manager-img-border);
+  box-shadow: var(--manager-img-shadow);
+  filter: var(--manager-img-filter);
+  opacity: var(--manager-img-opacity);
+}
+.manager-photo figcaption { max-width: var(--manager-img-width); }
+
+@media (min-width: 700px) {
+  .bio { grid-template-columns: 1fr var(--manager-img-width); }
+}
